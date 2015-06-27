@@ -75,14 +75,17 @@ WSGI_APPLICATION = 'littlebo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.mysql',
+       'NAME': 'littlebo',
+       'USER': 'root',
+       'PASSWORD': 'Admin123',
+       'HOST': '192.168.1.99',
+       'PORT': '3306',
+   }
 }
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
