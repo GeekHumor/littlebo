@@ -26,7 +26,7 @@ SECRET_KEY = 'qhx_tzeh$y+!c957fu#q(&)!s!v^248u!%-h74sfvk%8bgzizo'
 DEBUG = True
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0',]
+#ALLOWED_HOSTS = ['0.0.0.0',]
 
 
 # Application definition
@@ -56,7 +56,9 @@ ROOT_URLCONF = 'littlebo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+	'templates',
+	],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

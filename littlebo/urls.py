@@ -16,8 +16,10 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from littlebo.views import orz
+from login.views import login
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^orz/$', orz),
+	url(r'^login/$', login),
 ]
