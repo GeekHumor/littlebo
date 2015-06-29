@@ -8,7 +8,7 @@ from django.template import RequestContext
  #       return render_to_response('login/index.html')
 def login(request):
     if request.user.is_authenticated():
-        return HttpResponseRedirect('/index/')
+        return render_to_response('login/index.html')
 
     username = request.POST.get('username', '')
     password = request.POST.get('password', '')
@@ -17,10 +17,10 @@ def login(request):
 
     if user is not None and user.is_active:
         auth.login(request, user)
-        return HttpResponseRedirect('/index/')
+        return HttpResponseRedirect('login/index.html')
     else:
-        return render_to_response('login.html', RequestContext(request, locals()))
+        return render_to_response('login/login.html', RequestContext(request, locals()))
 
 def logout(request):
     auth.logout(request)
-    return  HttpResponseRedirect('/index/')
+    return  HttpResponseRedirect('login/login.html')
