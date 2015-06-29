@@ -19,7 +19,9 @@ from littlebo.views import orz
 from login.views import login
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^orz/$', orz),
+	#首頁導入login app
+	url(r'^$', login),
+	url(r'^admin/', include(admin.site.urls)),
+	url(r'^orz/$', orz),
 	url(r'^login/$', login),
 ]
