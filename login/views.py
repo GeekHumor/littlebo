@@ -19,7 +19,7 @@ def login(request):
         auth.login(request, user)
         return HttpResponseRedirect('login/index.html')
     else:
-        return render_to_response('login/login.html', RequestContext(request, locals()))
+        return render_to_response('login/loginfail.html', RequestContext(request, locals()))
 
 def logout(request):
     auth.logout(request)
