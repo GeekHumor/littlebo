@@ -79,9 +79,12 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'Admin123',
         'HOST': '192.168.1.99',
+<<<<<<< HEAD
         #'USER': 'django',
         #'PASSWORD': '1qaz@WSX',
         #'HOST': '172.19.78.70',
+=======
+>>>>>>> feature/Feature-1
         'PORT': '3306',
     }
 }
