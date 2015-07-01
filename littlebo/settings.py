@@ -72,19 +72,15 @@ WSGI_APPLICATION = 'littlebo.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-myhostnameMYSQL = socket.getfqdn(socket.gethostname())
-myhostipMYSQL = socket.gethostbyname(myhostnameMYSQL)
-#192.168.1.161 wei's mysql
-if myhostipMYSQL == "192.168.1.161":
-	DATABASES = {
-		'default': {'ENGINE': 'django.db.backends.mysql','NAME': 'littlebo','USER': 'root','PASSWORD': 'Admin123','HOST': '192.168.1.99','PORT': '3306',
-		}
+DATABASES = {
+	'default': {'ENGINE': 'django.db.backends.mysql',
+	'NAME': 'littlebo',
+	'USER': 'django',
+	'PASSWORD': '1qaz@WSX',
+	'HOST': 'testmysql.com.tw',
+	'PORT': '3306',
 	}
-else:
-        DATABASES = {
-                'default': {'ENGINE': 'django.db.backends.mysql','NAME': 'littlebo','USER': 'django','PASSWORD': '1qaz@WSX','HOST': '172.19.78.70','PORT': '3306',
-                }
-        }
+}
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 LANGUAGE_CODE = 'zh-TW'
